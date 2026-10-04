@@ -1,0 +1,16 @@
+.env
+parkmind.db
+__pycache__/
+*.pyc
+.DS_Store
+.env.*
+!.env.example
+.htpasswd
+node_modules/
+venv/
+.venv/
+.dart_tool/
+build/
+.gradle/
+.vs/
+uploads/targets/

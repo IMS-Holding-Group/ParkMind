@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم المسؤول: ParkMind</title>
+<link rel="icon" href="{{ url_for('static', filename='assets/images/logo.svg') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <div class="site-header__brand">
+        <img class="site-header__logo" src="{{ url_for('static', filename='assets/images/logo.svg') }}" alt="شعار ParkMind">
+        <span class="site-header__title">ParkMind: لوحة التحكم</span>
+    </div>
+    <nav class="site-header__nav">
+        <span class="site-header__user">مرحباً، {{ username }}</span>
+        <button class="button button--outline" id="logout-button" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            تسجيل الخروج
+        </button>
+    </nav>
+</header>
+
+<main class="page">
+    <div class="page__intro">
+        <h1 class="page__title">نظرة عامة على النظام</h1>
+        <p class="page__subtitle">إحصائيات لحظية وإدارة كاملة لحالة مواقف السيارات</p>
+    </div>
+
+    <section class="stats-grid" id="stats-grid">
+        <div class="stat-panel">
+            <div class="stat-panel__label">إجمالي الأماكن</div>
+            <div class="stat-panel__value" id="stat-total">0</div>
+        </div>
+        <div class="stat-panel">
+            <div class="stat-panel__label">الأماكن المشغولة</div>
+            <div class="stat-panel__value" id="stat-occupied">0</div>
+        </div>
+        <div class="stat-panel">
+            <div class="stat-panel__label">الأماكن الشاغرة</div>
+            <div class="stat-panel__value" id="stat-vacant">0</div>
+        </div>
+        <div class="stat-panel">
+            <div class="stat-panel__label">نسبة الإشغال</div>
+            <div class="stat-panel__value" id="stat-rate">0%</div>
+        </div>
+    </section>
+
+    <section class="lots-grid" id="admin-lots-grid" aria-live="polite"></section>
+
+    <div class="dashboard-grid" style="margin-top: 24px">
+        <div class="panel">
+            <div class="panel__title">تحليل الإشغال خلال آخر الساعات</div>
+            <canvas class="chart-canvas" id="occupancy-chart"></canvas>
+        </div>
+        <div class="panel">
+            <div class="panel__title">سجل الأحداث</div>
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>الوقت</th>
+                        <th>المكان</th>
+                        <th>الحالة</th>
+                        <th>المصدر</th>
+                    </tr>
+                </thead>
+                <tbody id="log-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

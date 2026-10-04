@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkMind: نظام إدارة المواقف</title>
+<link rel="icon" href="{{ url_for('static', filename='assets/images/logo.svg') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <div class="site-header__brand">
+        <img class="site-header__logo" src="{{ url_for('static', filename='assets/images/logo.svg') }}" alt="شعار ParkMind">
+        <span class="site-header__title">ParkMind</span>
+    </div>
+    <nav class="site-header__nav">
+        <a class="button button--outline" href="{{ url_for('pages.login_page') }}">دخول المسؤول</a>
+    </nav>
+</header>
+
+<main class="page">
+    <div class="page__intro">
+        <h1 class="page__title">مواقف السيارات المتاحة</h1>
+        <p class="page__subtitle">تعرض هذه الصفحة الحالة اللحظية لكل مكان وقوف، وتُحدَّث تلقائياً كل 30 ثانية</p>
+    </div>
+
+    <div class="toolbar">
+        <input class="toolbar__search" type="text" id="lot-search" placeholder="ابحث باسم الموقف أو العنوان">
+        <button class="button button--primary" id="find-nearest-button" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 22C12 22 20 14.5 20 9C20 4.58 16.42 1 12 1C7.58 1 4 4.58 4 9C4 14.5 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            أقرب موقف متاح
+        </button>
+    </div>
+
+    <div class="nearest-result" id="nearest-result">
+        <div>
+            <div class="nearest-result__title" id="nearest-result-title"></div>
+            <div class="nearest-result__meta" id="nearest-result-meta"></div>
+        </div>
+        <button class="button button--outline" id="dismiss-nearest-button" type="button">إغلاق</button>
+    </div>
+
+    <section class="lots-grid" id="lots-grid" aria-live="polite"></section>
+
+    <section class="info-panel" id="info-panel">
+        <div class="info-panel__title" id="info-panel-title"></div>
+        <div id="info-panel-body"></div>
+    </section>
+</main>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

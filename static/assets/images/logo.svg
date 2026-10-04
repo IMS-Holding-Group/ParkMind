@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار ParkMind">
+    <circle cx="32" cy="32" r="31" fill="#FFFFFF" stroke="#D8E0E6" stroke-width="1"/>
+    <path d="M14 20 C14 14 19 10 24 12 C27 9 32 10 33 14 C38 13 41 18 39 22 C42 24 41 29 37 30 C38 34 34 37 30 35 C29 39 23 39 21 35 C16 36 12 32 14 28 C10 26 11 21 14 20 Z" fill="#1B4E8C"/>
+    <path d="M18 19 L34 19 M17 23 L36 23 M18 27 L35 27 M20 31 L32 31" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity="0.55"/>
+    <path d="M12 15 L8 11 M15 12 L12 7 M19 10 L18 5" stroke="#1B4E8C" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M46 14 C54 14 58 20 58 26 C58 34 46 46 46 46 C46 46 34 34 34 26 C34 20 38 14 46 14 Z" fill="#1F9D55"/>
+    <path d="M40 24 L40 32 M40 24 L45 24 C47.5 24 47.5 28 45 28 L40 28" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="45" width="20" height="9" rx="3" fill="#FFFFFF" stroke="#1B4E8C" stroke-width="1.6"/>
+    <path d="M27 45 L29 41 L39 41 L41 45" fill="none" stroke="#1B4E8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="28" cy="54" r="2.2" fill="#1B4E8C"/>
+    <circle cx="40" cy="54" r="2.2" fill="#1B4E8C"/>
+</svg>

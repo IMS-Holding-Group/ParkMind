@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل دخول المسؤول: ParkMind</title>
+<link rel="icon" href="{{ url_for('static', filename='assets/images/logo.svg') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<main class="auth-page">
+    <div class="auth-card">
+        <img class="auth-card__logo" src="{{ url_for('static', filename='assets/images/logo.svg') }}" alt="شعار ParkMind">
+        <h1 class="auth-card__title">دخول المسؤول</h1>
+        <p class="auth-card__subtitle">يرجى إدخال بيانات الدخول للوصول إلى لوحة التحكم</p>
+
+        <div class="form-error" id="login-error"></div>
+
+        <form id="login-form" novalidate>
+            <input type="hidden" id="csrf-token" value="{{ csrf_token }}">
+            <div class="form-field">
+                <label class="form-field__label" for="username">اسم المستخدم</label>
+                <input class="form-field__input" type="text" id="username" name="username" autocomplete="username" required>
+            </div>
+            <div class="form-field">
+                <label class="form-field__label" for="password">كلمة المرور</label>
+                <input class="form-field__input" type="password" id="password" name="password" autocomplete="current-password" required>
+            </div>
+            <button class="button button--primary auth-card__submit" type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+</main>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

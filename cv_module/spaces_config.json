@@ -1,0 +1,20 @@
+{
+    "lot_name": "موقف المكتبة المركزية",
+    "frame_width": 640,
+    "frame_height": 360,
+    "gaussian_blur_kernel": 3,
+    "adaptive_threshold_block_size": 25,
+    "adaptive_threshold_constant": 16,
+    "occupancy_pixel_threshold": 900,
+    "temporal_smoothing_frames": 5,
+    "spaces": [
+        { "space_number": "A1", "x": 10, "y": 20, "w": 130, "h": 140 },
+        { "space_number": "A2", "x": 150, "y": 20, "w": 130, "h": 140 },
+        { "space_number": "A3", "x": 290, "y": 20, "w": 130, "h": 140 },
+        { "space_number": "A4", "x": 430, "y": 20, "w": 130, "h": 140 },
+        { "space_number": "A5", "x": 10, "y": 190, "w": 130, "h": 140 },
+        { "space_number": "A6", "x": 150, "y": 190, "w": 130, "h": 140 },
+        { "space_number": "A7", "x": 290, "y": 190, "w": 130, "h": 140 },
+        { "space_number": "A8", "x": 430, "y": 190, "w": 130, "h": 140 }
+    ]
+}
