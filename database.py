@@ -97,7 +97,7 @@ def _seed_data(db):
 
     cursor.execute(
         'INSERT INTO user (username, password_hash, role) VALUES (?, ?, ?)',
-        ('admin', generate_password_hash('Admin@123'), 'admin')
+        ('admin', generate_password_hash(''), 'admin')
     )
 
     db.commit()
